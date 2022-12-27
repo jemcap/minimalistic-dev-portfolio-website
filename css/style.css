@@ -388,6 +388,29 @@ a:hover span {
   transform: translate3d(-200%, 0, 0);
 }
 
+.footer__wrapper {
+  justify-content: center;
+  align-items: center;
+  line-height: 0.2rem;
+  margin-top: 75px;
+}
+
+.footer__icons {
+  gap: 2rem;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+
+  
+
+}
+
+
+.fa-brands {
+  border: solid 1px hsl(var(--clr-dark));
+  padding: .3rem;
+  border-radius: 50%;
+}
+
 /*---------------*/
 /* Media Queries */
 /*---------------*/
