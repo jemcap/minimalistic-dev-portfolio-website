@@ -24,8 +24,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -39,7 +39,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
 /* A elements that don't have a class get default styles */
@@ -65,9 +65,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -82,9 +82,23 @@ select {
 /* Global Styles */
 /*---------------*/
 
-/* Colours */
 :root {
-    --primary-clr: ;
+  --primary-clr: 0 0% 15%;
+  --secondary-clr: 46 100% 88%;
+  --clr-dark: 230 35% 7%;
+  --clr-light: 231 77% 90%;
+  --clr-white: 0 0% 100%;
+
+  /* font-sizes */
+  --fs-900: 9.375rem;
+  --fs-800: 6.25rem;
+  --fs-750: 5.5rem;
+  --fs-700: 3.5rem;
+  --fs-600: 2rem;
+  --fs-500: 1.75rem;
+  --fs-400: 1.125rem;
+  --fs-300: 1rem;
+  --fs-200: 0.875rem;
 }
 
 /*---------*/
@@ -92,28 +106,117 @@ select {
 /*---------*/
 
 .flex {
-    display: flex;
-    gap: ;
+  display: flex;
+  gap: var(--gap, 1rem);
 }
 
-.flex-column {
-    display: flex;
-    flex-direction: column;
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
 }
 
 .wrapper {
   margin-inline: 2rem;
 }
 
+/* Colours */
+.bg-dark {
+  background-color: hsl(var(--clr-dark));
+}
+.bg-accent {
+  background-color: hsl(var(--clr-light));
+}
+.bg-white {
+  background-color: hsl(var(--clr-white));
+}
 
+.text-dark {
+  color: hsl(var(--clr-dark));
+}
+.text-accent {
+  color: hsl(var(--clr-light));
+}
+.text-white {
+  color: hsl(var(--clr-white));
+}
+.text-highlight {
+  color: hsl(var(--secondary-clr));
+}
 
+/* Typography */
 
-/*  */
+.letter-spacing-1 {
+  letter-spacing: 4.75px;
+}
+.letter-spacing-2 {
+  letter-spacing: 2.7px;
+}
+.letter-spacing-3 {
+  letter-spacing: 2.35px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.fs-900 {
+  font-size: var(--fs-900);
+}
+.fs-800 {
+  font-size: var(--fs-800);
+}
+.fs-700 {
+  font-size: var(--fs-700);
+}
+.fs-600 {
+  font-size: var(--fs-600);
+}
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-300 {
+  font-size: var(--fs-300);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-750,
+.fs-600 {
+  line-height: 1.1;
+}
 
 .nav__links {
   justify-content: flex-end;
   width: 100%;
-
 }
 
 .nav__links-item {
@@ -136,16 +239,23 @@ select {
 .heading__content {
   border-left: 2px solid black;
   padding-inline: 1.5rem;
-  line-height: 3.5rem;
+  line-height: 4.5rem;
 }
 
 .heading__content h1 {
-  font-size: 4rem;
+  font-size: var(--fs-750);
+  font-weight: bold;
+}
+.heading__content h3 {
+  font-size: var(--fs-600);
+  font-weight: bold;
+}
+.heading__content p {
+  font-size: var(--fs-400);
 }
 
-
 .scrolling-words-container {
-  font-size: 1.5rem;
+  font-size: var(--fs-500);
   font-weight: 600;
 }
 .scrolling-words-box {
@@ -156,7 +266,7 @@ select {
 .scrolling-words-box ul {
   margin: 0;
   padding: 0;
-  animation: scrollUp 4s infinite;
+  animation: scrollUp 5.5s infinite;
 }
 .scrolling-words-box ul li {
   display: flex;
@@ -165,17 +275,34 @@ select {
   height: 3rem;
   list-style: none;
 }
+
 @keyframes scrollUp {
-  15%, 25% {
+  15%,
+  25% {
     transform: translateY(-20%);
   }
-  40%, 50% {
+  40%,
+  50% {
     transform: translateY(-40%);
   }
-  65%, 75% {
+  65%,
+  75% {
     transform: translateY(-60%);
   }
-  90%, 100% {
+  90%,
+  100% {
     transform: translateY(-80%);
   }
+}
+
+.about__content {
+  height: 100vh;
+  margin-top: 5rem;
+  padding-block: 2rem;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.about__content-img {
+  width: 100rem;
 }
