@@ -246,7 +246,7 @@ select {
   list-style: none;
 }
 
-/*  */
+/* ==================== HEADING ==================== */
 
 #heading {
   height: 90vh;
@@ -318,6 +318,10 @@ select {
   }
 }
 
+/* ==================== HEADING END ==================== */
+
+/* ==================== ABOUT ==================== */
+
 .about__content {
   gap: 8rem;
 }
@@ -330,6 +334,9 @@ select {
   width: 65rem;
 }
 
+/* ==================== ABOUT END ==================== */
+
+/* ==================== PROJECTS ==================== */
 .project__link-box {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   padding: 1.2rem 2rem;
@@ -388,6 +395,10 @@ a:hover span {
   transform: translate3d(-200%, 0, 0);
 }
 
+/* ==================== PROJECTS END ==================== */
+
+/* ==================== FOOTER ==================== */
+
 .footer__wrapper {
   justify-content: center;
   align-items: center;
@@ -410,6 +421,14 @@ a:hover span {
   padding: .3rem;
   border-radius: 50%;
 }
+
+/* ==================== FOOTER END ==================== */
+
+/* ############################################################## */
+/* about.html styling                                             */
+/* ############################################################## */
+
+
 
 /*---------------*/
 /* Media Queries */
