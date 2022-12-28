@@ -337,30 +337,37 @@ select {
 /* ==================== ABOUT END ==================== */
 
 /* ==================== PROJECTS ==================== */
+.project__content {
+  height: 100%;
+  border: solid 2px blue;
+}
+
 .project__link-box {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   padding: 1.2rem 2rem;
   border-radius: 20px;
 }
 
-a {
+.project__link-box a {
   overflow: hidden;
   position: relative;
   display: inline-block;
+  
 }
 
 a:link, a:visited {
   color: hsl(var(--text-dark));
+  text-decoration: none;
 }
 
-a::before,
-a::after {
+.project__link-box a::before,
+.project__link-box a::after {
  content: '';
   position: absolute;
   width: 100%;
   left: 0;
 }
-a::before {
+.project__link-box a::before {
   background-color: #54b3d6;
   height: 2px;
   bottom: 0;
@@ -368,7 +375,7 @@ a::before {
   transform: scaleX(0);
   transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
 }
-a::after {
+.project__link-box a::after {
   content: attr(data-replace);
   height: 100%;
   top: 0;
@@ -378,20 +385,20 @@ a::after {
   color: #54b3d6;
 }
 
-a:hover::before {
+.project__link-box a:hover::before {
   transform-origin: 0% 50%;
   transform: scaleX(1);
 }
-a:hover::after {
+.project__link-box a:hover::after {
   transform: translate3d(0, 0, 0);
 }
 
-a span {
+.project__link-box a span {
   display: inline-block;
   transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
-a:hover span {
+.project__link-box a:hover span {
   transform: translate3d(-200%, 0, 0);
 }
 
@@ -403,7 +410,8 @@ a:hover span {
   justify-content: center;
   align-items: center;
   line-height: 0.2rem;
-  margin-top: 75px;
+  margin-top: 50px;
+  height: 75px;
 }
 
 .footer__icons {
