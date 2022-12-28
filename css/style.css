@@ -148,7 +148,7 @@ select {
 
 .section-layout {
     height: 100vh;
-    margin-top: 5rem;
+    margin-top: 2rem;
     padding-block: 2rem;
     display: flex;
     gap: 2.5rem;
@@ -410,7 +410,7 @@ a:link, a:visited {
   justify-content: center;
   align-items: center;
   line-height: 0.2rem;
-  margin-top: 50px;
+  margin-top: 120px;
   height: 75px;
 }
 
@@ -442,11 +442,26 @@ a:link, a:visited {
 }
 
 .about__content-img {
-  width: 50%;
+  width: 40%;
+}
+.about__content-text {
+  width: 60%;
 }
 
 .about__content-text_3 {
-  width: 120%;
+  width: 50%;
+}
+.about__content-img_3 {
+  width: 50%;
+}
+.about__content-text-sports {
+  width: 40%;
+}
+.about__content-img-sports {
+  width: 60%;
+}
+.about__content-img-sports img {
+  width: 100%;
 }
 
 
