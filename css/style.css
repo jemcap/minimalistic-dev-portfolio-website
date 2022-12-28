@@ -118,6 +118,7 @@ select {
   gap: var(--gap, 1rem);
 }
 
+
 .grid {
   display: grid;
   gap: var(--gap, 1rem);
@@ -339,7 +340,6 @@ select {
 /* ==================== PROJECTS ==================== */
 .project__content {
   height: 100%;
-  border: solid 2px blue;
 }
 
 .project__link-box {
@@ -436,6 +436,18 @@ a:link, a:visited {
 /* about.html styling                                             */
 /* ############################################################## */
 
+.about__content {
+  justify-content: center;
+  align-items: center;
+}
+
+.about__content-img {
+  width: 50%;
+}
+
+.about__content-text_3 {
+  width: 120%;
+}
 
 
 /*---------------*/
