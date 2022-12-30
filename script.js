@@ -2,20 +2,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // array with texts to type in typewriter
   var dataText = [
     "Hello! I'm Josh!",
-    "¡Hola! ¡Me llamo Josh!",
-    "Bonjour! Je m'appelle Josh",
-    "Hallo! Ich bin Josh",
-    "你好! 我是乔希",
-    "Hej! Jag heter Josh!",
-    "Olá! Eu sou Josh!",
-    "Hallo! Ik ben Josh!",
-    "Helló! Josh vagyok!",
-    "Ciao a tutti! Sono Josh!",
-    "Witam! Jestem Josh!",
-    "Dobrý den! Já jsem Josh!",
-    "Sveiki! Aš esu Džošas!",
-    "こんにちは！ジョシュです。ジョシュです!",
-    "Hello! I'm Josh!",
   ];
 
   // type one text in the typwriter
@@ -24,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // chekc if text isn't finished yet
     if (i < text.length) {
       // add next character to h1
-      document.getElementById("about__title").innerHTML =
+      document.getElementById("typetitle").innerHTML =
         text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
 
       // wait for a while and call this function again for next character
@@ -43,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     if (typeof dataText[i] == "undefined") {
       setTimeout(function () {
         StartTextAnimation(0);
-      }, 20000);
+      }, 25000);
     }
     // check if dataText[i] exists
     if (i < dataText[i].length) {

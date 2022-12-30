@@ -427,16 +427,23 @@ a:visited {
 }
 
 .footer__icons {
-  gap: 2rem;
-  font-size: 1.2rem;
+  gap: 2.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.contact__icons {
+  gap: 3.5rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.fa-brands {
+.fa-brands,
+.fa-regular {
   border: solid 1px hsl(var(--clr-dark));
-  padding: 0.3rem;
+  padding: 0.5rem;
   border-radius: 50%;
 }
+
 
 /* ==================== FOOTER END ==================== */
 
@@ -486,6 +493,12 @@ form {
 }
 
 
+/* ############################################################## */
+/* contact.html styling                                           */
+/* ############################################################## */
+
+
+
 [type="submit"] {
   width: 100%;
   background: hsl(var(--clr-dark));
@@ -502,6 +515,28 @@ form {
 }
 [type="submit"]:hover {
   background: #cc4949;
+}
+
+#contact_content {
+  border: 2px solid red;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__heading {
+  border: 2px solid blue;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.contact__wrapper {
+  justify-content: flex-start;
 }
 
 /*---------------*/
